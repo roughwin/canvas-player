@@ -1,0 +1,35 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS
+
+Yarn version: 
+  0.21.3
+
+Node version: 
+  8.9.1
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "scripts": {
+      "start": "webpack-dev-server --progress --hot"
+    },
+    "dependencies": {
+      "webpack": "^4.16.3",
+      "webpack-cli": "^3.1.0",
+      "webpack-dev-server": "^3.1.5"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EEXIST: file already exists, mkdir '/Users/rough/Project/learn-webpack/node_modules/acorn-dynamic-import'

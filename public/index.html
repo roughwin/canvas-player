@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    .size {
+      height: 300px;
+      width: 500px;
+    }
+    #canvas {
+      background-image:url(/eg_bg_04.gif)
+    }
+    #ctrl-container {
+      background-color: rgba(96, 125, 139, 0.2);
+      width: 500px;
+    }
+    #ctrl-bar {
+      height: 30px;
+      width: 450px;
+    }
+    #ctrl-bar > .cached {
+      stroke: rgba(255,255,255,0.4);
+      stroke-width: 2px;
+    }
+    #ctrl-bar > .played {
+      stroke: red;
+      stroke-width: 2px;
+    }
+    #ctrl-bar > .total {
+      stroke: rgba(0,0,0,0.5);
+      stroke-width: 2px;
+    }
+    #ctrl-bar:hover {
+      cursor: pointer;
+    }
+    #play-btn-container , #play-btn {
+      transition:all 0.5s ease-in-out;
+    }
+    #play-btn-container:hover {
+      cursor: pointer;
+    }
+    #play-btn {
+        stroke:none;
+    }
+    #time {
+      font-size: 12px;
+    }
+    #mini {
+      width: 100px;
+      height: 55px;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <canvas id="canvas" class="size"></canvas>
+    <div id="ctrl-container">
+      <svg id="play-btn-container" height="35px" version="1.1" viewBox="0 0 36 36" width="35px">
+        <path id="play-btn" class="ytp-svg-fill" d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" ></path>
+      </svg>
+      <svg id="ctrl-bar">
+        <text x="0" y="21" id="time">00:00:00/text</text>
+        <path class="total"></path>
+        <path class="cached"></path>
+        <path class="played"></path>
+      </svg>
+    </div>
+  </div>
+  <canvas id="mini"></canvas>
+  <script src="/public/main.bundle.js"></script>
+</body>
+</html>
